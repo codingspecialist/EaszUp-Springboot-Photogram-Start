@@ -25,7 +25,7 @@
 					<div class="sl__item__contents__icon">
 
 						<button>
-							<i class="fas fa-heart active" id="storyLikeIcon-1"></i>
+							<i class="fas fa-heart active" id="storyLikeIcon-1" onclick="toggleLike()"></i>
 						</button>
 					</div>
 

@@ -28,18 +28,16 @@
 			<div class="name-group">
 				<h2>TherePrograming</h2>
 
-
 				<button class="cta" onclick="location.href='/image/upload'">사진등록</button>
+				<button class="cta" onclick="toggleSubscribe(this)">구독하기</button>
 				<button class="modi" onclick="popup('.modal-info')">
 					<i class="fas fa-cog"></i>
 				</button>
-
-				<button class="cta" >구독하기</button>
-
 			</div>
+
 			<div class="subscribe">
 				<ul>
-					<li><a href=""> 게시물<span>4</span>
+					<li><a href=""> 게시물<span>3</span>
 					</a></li>
 					<li><a href="javascript:subscribeInfoModalOpen();"> 구독정보<span>2</span>
 					</a></li>
@@ -66,20 +64,33 @@
 
 				<!--아이템들-->
 
-				<c:forEach var="image" items="${dto.user.images}">
 
-					<div class="img-box">
-						<a href=""> <img src="/upload/${image.postImageUrl}" alt="">
+				<div class="img-box">
+					<a href=""> <img src="/images/home.jpg" />
+					</a>
+					<div class="comment">
+						<a href="#" class=""> <i class="fas fa-heart"></i><span>${image.likeCount}</span>
 						</a>
-						<div class="comment">
-							<a href="#a" class=""> <i class="fas fa-heart"></i><span>${image.likeCount}</span>
-							</a>
-						</div>
 					</div>
+				</div>
 
-				</c:forEach>
+				<div class="img-box">
+					<a href=""> <img src="/images/home.jpg" />
+					</a>
+					<div class="comment">
+						<a href="#" class=""> <i class="fas fa-heart"></i><span>${image.likeCount}</span>
+						</a>
+					</div>
+				</div>
 
-
+				<div class="img-box">
+					<a href=""> <img src="/images/home.jpg" />
+					</a>
+					<div class="comment">
+						<a href="#" class=""> <i class="fas fa-heart"></i><span>${image.likeCount}</span>
+						</a>
+					</div>
+				</div>
 
 				<!--아이템들end-->
 			</div>
@@ -90,8 +101,7 @@
 <!--로그아웃, 회원정보변경 모달-->
 <div class="modal-info" onclick="modalInfo()">
 	<div class="modal">
-		<button onclick="location.href='/user/${dto.user.id}/update'">회원정보
-			변경</button>
+		<button onclick="location.href='/user/update'">회원정보 변경</button>
 		<button onclick="location.href='/logout'">로그아웃</button>
 		<button onclick="closePopup('.modal-info')">취소</button>
 	</div>
@@ -117,9 +127,38 @@
 				<i class="fas fa-times"></i>
 			</button>
 		</div>
-		<div class="subscribe-list" id="subscribeModalList"></div>
+
+		<div class="subscribe-list" id="subscribeModalList">
+
+			<div class="subscribe__item" id="subscribeModalItem-1">
+				<div class="subscribe__img">
+					<img src="#" onerror="this.src='/images/person.jpeg'"/>
+				</div>
+				<div class="subscribe__text">
+					<h2>love</h2>
+				</div>
+				<div class="subscribe__btn">
+					<button class="cta blue" onclick="toggleSubscribeModal(this)">구독취소</button>
+				</div>
+			</div>
+
+
+			<div class="subscribe__item" id="subscribeModalItem-2">
+				<div class="subscribe__img">
+					<img src="#" onerror="this.src='/images/person.jpeg'"/>
+				</div>
+				<div class="subscribe__text">
+					<h2>ssar</h2>
+				</div>
+				<div class="subscribe__btn">
+					<button class="cta blue" onclick="toggleSubscribeModal(this)">구독취소</button>
+				</div>
+			</div>
+		</div>
 	</div>
+
 </div>
+
 
 <script src="/js/profile.js"></script>
 

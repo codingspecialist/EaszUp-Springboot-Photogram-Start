@@ -79,6 +79,7 @@
 }
 .profile .profile-right .subscribe {
   height: 28px;
+  margin-bottom: 5px;
 }
 .profile .profile-right .subscribe ul {
   display: flex;
