@@ -37,9 +37,9 @@
 ### 데이터베이스
 
 ```sql
-create user 'costa'@'%' identified by 'costa1234';
-GRANT ALL PRIVILEGES ON *.* TO 'costa'@'%';
-create database costa;
+create user 'cos'@'%' identified by 'cos1234';
+GRANT ALL PRIVILEGES ON *.* TO 'cos'@'%';
+create database photogram;
 ```
 
 ### yml 설정
