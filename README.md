@@ -61,9 +61,9 @@ spring:
       
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/costa?serverTimezone=Asia/Seoul
-    username: costa
-    password: costa1234
+    url: jdbc:mariadb://localhost:3306/cos?serverTimezone=Asia/Seoul
+    username: cos
+    password: cos1234
     
   jpa:
     open-in-view: true
