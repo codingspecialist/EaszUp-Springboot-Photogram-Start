@@ -65,7 +65,7 @@ spring:
       
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/cos?serverTimezone=Asia/Seoul
+    url: jdbc:mariadb://localhost:3306/photogram?serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&useSSL=false
     username: cos
     password: cos1234
     
@@ -87,8 +87,8 @@ spring:
       name: test
       password: 1234   
 
-file:
-  path: C:/src/springbootwork-sts/upload/
+#file:
+#  path: C:/src/springbootwork-sts/upload/
 ```
 
 ### 태그라이브러리
